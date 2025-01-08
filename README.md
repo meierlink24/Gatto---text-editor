@@ -20,7 +20,7 @@ Gatto is a lightweight and simple text editor written in C++ designed for basic 
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/meierlink24/Gatto---text-editor.git>
    cd gatto
    ```
 2. Compile the project:
