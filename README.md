@@ -1,68 +1,68 @@
-# GATTO - Terminal-Based Text Editor
+# Gatto Text Editor
 
-## WARNING
-This project is in its earliest stage of development.
+![Gatto Logo](/assets/pics/Gatto.png)
 
----
-
-## What is Gatto?
-
-Gatto is a terminal-based text editor, similar to Vim. I started this project because I wanted to create my own text editor with a fully customizable workflow and appearance tailored to my preferences.
-
----
+Gatto is a lightweight and simple text editor written in C++ designed for basic editing tasks with a focus on usability and simplicity. This editor is ideal for learning and quick text manipulation in a terminal environment.
 
 ## Features
+- **Insert and Escape Modes**: Seamlessly toggle between editing and navigation modes.
+- **Undo**: Undo your last action with the `u` key.
+- **Search**: Search for a specific string using the `/` key.
+- **Save to File**: Save the current document with `Ctrl + S`.
+- **Syntax Highlighting**: Basic syntax highlighting for C++ keywords.
+- **Line Numbers**: Display line numbers for easy navigation.
 
-### Current Features:
-- **Movement Shortcuts**: Use `W`, `A`, `S`, `D` to navigate around the file.
-- **Insert Mode**: Press `I` to switch to insert mode for editing text.
-- **Copy & Paste**:
-  - Press `C` to copy text.
-  - Press `P` to paste copied text.
-- **Delete**: Press `X` to delete words.
-- **New Line**: While in insert mode, pressing `Enter` will add a new line.
+## Installation
+### Prerequisites
+- A C++17-compatible compiler (e.g., `g++`)
+- GNU Make
 
-### Future Enhancements:
-- Support for necessary plugins to enhance functionality.
-- Advanced customization options for workflow and appearance.
-- Improved error handling and seamless integration with terminal environments.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd gatto
+   ```
+2. Compile the project:
+   ```bash
+   make
+   ```
+3. Run the editor:
+   ```bash
+   ./text_editor
+   ```
 
----
+## Usage
+- Navigate between lines and characters using `w`, `s`, `a`, `d`.
+- Enter **Insert Mode** with the `i` key to type text.
+- Exit **Insert Mode** with the `ESC` key.
+- Delete a character with the `x` key.
+- Save your work with `Ctrl + S`.
+- Undo your last action with the `u` key.
+- Search for a term using `/` and enter the query.
+- Exit the editor with the `q` key.
 
-## Why Gatto?
+## Project Structure
+```
+project/
+├── include/        # Header files
+│   ├── editor.h
+├── src/            # Source files
+│   ├── main.cpp
+│   ├── editor.cpp
+├── Makefile        # Build system
+├── README.md       # Project documentation
+```
 
-Gatto is being built to:
-1. Provide a streamlined and intuitive experience for terminal users.
-2. Introduce unique workflows with modern shortcuts and modes.
-3. Serve as a lightweight alternative to existing text editors, with room for personal customization.
+## Screenshot
+![Gatto Screenshot](/assets/pics/gatto.png)
 
----
-
-## Installation (Planned)
-
-- **Step 1**: Clone the repository from GitHub.
-- **Step 2**: Follow the setup instructions to install dependencies and configure your terminal environment.
-- **Step 3**: Launch Gatto from your terminal and start editing!
-
-Note: Detailed installation steps will be added as the project progresses.
-
----
-
-## Contributing
-
-If you want to contribute to Gatto:
-- Report bugs and suggest features by opening an issue.
-- Submit pull requests for enhancements.
-
-Let's build something awesome together!
-
----
+## Contributions
+Contributions are welcome! Feel free to fork the repository and submit a pull request with your improvements.
 
 ## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-Gatto will be open-source. Licensing details will be added in future updates.
-
----
-
-Stay tuned for more updates and improvements!
+## Acknowledgments
+Special thanks to everyone who contributed to the development and testing of Gatto.
 

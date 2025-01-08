@@ -1,29 +1,21 @@
-# Compiler
+# Compiler and flags
 CXX = g++
+CXXFLAGS = -Wall -std=c++17 -g -Iinclude
 
-# Compiler flags
-CXXFLAGS = -Wall -Wextra -std=c++11
-
-# Source files
-SRC = src/main.cpp src/editor.cpp src/text_buffer.cpp src/inputhandler.cpp
-
-# Object files (automatically generated from source files)
+# Source files and targets
+SRC = src/main.cpp src/editor.cpp
 OBJ = $(SRC:.cpp=.o)
+TARGET = GATTO
 
-# Target executable
-TARGET = gatto
-
-# Default target
 all: $(TARGET)
 
-# Link object files to create the executable
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
 
-# Rule to compile .cpp files into .o files
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Clean up generated files
 clean:
-	rm -f $(OBJ) $(TARGET) debug
+	rm -f $(OBJ) $(TARGET)
+
+.PHONY: all clean
